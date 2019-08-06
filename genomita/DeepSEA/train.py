@@ -46,14 +46,12 @@ print (model)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-device
 
 labels1 = torch.load('/content/drive/My Drive/colab/dataset/labels_1.pt')
 
 labels2 = torch.load('/content/drive/My Drive/colab/dataset/labels_2.pt')
 
 labels = torch.cat([labels1, labels2])
-labels.shape
 
 del labels2
 
@@ -70,9 +68,6 @@ del seqs1
 
 del seqs2
 
-seqs.shape
-
-seqs.shape
 
 def my_loss(output, target):
     nll_loss = 0.0
@@ -90,7 +85,6 @@ def my_loss(output, target):
 import torch.optim as optim
 optimizer = optim.SGD(model.parameters(), lr=1, momentum=0.9, weight_decay=1e-6, )
 
-labels.shape[0]
 
 model.train() 
 for epoch in range(1): 
