@@ -42,6 +42,7 @@ model.load_state_dict(torch.load('/content/drive/My Drive/colab/dataset/trained_
 
 seqs = torch.load('/content/drive/My Drive/colab/dataset/seqs_9.pt')
 
+model.eval()
 for i in range(seqs.shape[0]):
   inputs = seqs[i] 
   inputs = inputs.float() 
