@@ -29,6 +29,3 @@ class net (nn.Module):
     x = torch.sigmoid(self.fc1(x))
     print (x.shape)
     return x
-
-
-model = net()
