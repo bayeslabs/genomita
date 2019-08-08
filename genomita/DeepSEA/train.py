@@ -4,13 +4,11 @@ import argparse
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-import model
+import DeepSEA_model
 
-# Load the Drive helper and mount
-from google.colab import drive
-
-# This will prompt for authorization.
-drive.mount('/content/drive')
+#if you want to import from google colab folder you can use this below commented code 
+# from google.colab import drive
+# drive.mount('/content/drive')
 
 
 model = net()
@@ -20,9 +18,9 @@ print (model)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-labels1 = torch.load('/content/drive/My Drive/colab/dataset/labels_1.pt')
+labels1 = torch.load('/data/labels_1.pt')
 
-labels2 = torch.load('/content/drive/My Drive/colab/dataset/labels_2.pt')
+labels2 = torch.load('/data/labels_2.pt')
 
 labels = torch.cat([labels1, labels2])
 
@@ -30,9 +28,9 @@ del labels2
 
 del labels1
 
-seqs1 = torch.load('/content/drive/My Drive/colab/dataset/seqs_1.pt')
+seqs1 = torch.load('/data/seqs_1.pt')
 
-seqs2 = torch.load('/content/drive/My Drive/colab/dataset/seqs_2.pt')
+seqs2 = torch.load('/data/seqs_2.pt')
 
 seqs = torch.cat([seqs1, seqs2])
 
