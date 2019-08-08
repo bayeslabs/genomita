@@ -1,4 +1,4 @@
-<h1> DeepSEA Model (Pytorch)</h1>
+<h1 style='color:red'> DeepSEA Model (Pytorch)</h1>
 
 1) DeepSEA model written in pytorch is trained on 10,000 DNA sequences. We can trained it on more sequences to increase the accuracy
 
