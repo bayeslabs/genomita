@@ -2,7 +2,7 @@ import torch
 import math
 import torch.nn as nn
 import torch.nn.functional as F
-import model
+import DeepSEA_model
 
 #if you want to import from google colab folder you can use this below commented code 
 # from google.colab import drive
